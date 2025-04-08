@@ -1,0 +1,118 @@
+.home-container{
+    position: relative;
+    top: 65px;
+    left: 4.8vw;
+    padding: 20px 100px;
+    background-color: transparent;
+    color: white;
+    width: calc(100% - 4.8vw);
+    height: calc(100vh - 65px);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; */
+    overflow-y: auto;
+}
+
+.home-container h1{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.hero_gerner{
+    padding: 30px 15px 40px 0;
+}
+
+
+.hero_gerner ul{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.hero_gerner ul li{
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.109);
+}
+
+.song-list1{
+    width: 100%;
+    height: fit-content;
+    /* padding: 10px; */
+}
+
+.song-list1 ul{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.song-li{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.song-image{
+    flex-shrink: 0;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.song-li div{
+    position: relative;
+}
+
+.song-li div span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+.song-art {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.song-art p {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.song-li:nth-child(1){
+    transition: all 0.3s ease-in-out;
+}
+
+.song-li:hover div span{
+    display: block;
+}

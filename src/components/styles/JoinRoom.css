@@ -1,0 +1,37 @@
+.join-room{
+    position: relative;
+    top: 65px;
+    left: 4.8vw;
+    padding: 20px 100px;
+    background-color: transparent;
+    color: white;
+    width: calc(100% - 4.8vw);
+    height: calc(100vh - 65px);
+}
+
+.join-room h1{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.join-room-form input{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.join-room-form button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: orangered;
+}
+
+.join-room-form{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

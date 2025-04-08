@@ -1,0 +1,19 @@
+.load{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    backdrop-filter: blur(2px);
+}
+
+.app_bg{
+    height: 100vh;
+    background-color: rgb(3, 3, 3);
+}

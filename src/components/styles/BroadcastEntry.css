@@ -1,0 +1,26 @@
+.broadcast-entry{
+    position: absolute;
+    top: 65px;
+    left: 4.8vw;
+    padding: 20px 100px;
+    background-color: transparent;
+    color: white;
+    width: calc(100% - 4.8vw);
+    height: calc(100vh - 65px);
+}
+
+.broadcast-btn button{
+    padding: 20px;
+    background-color: orangered;
+    border-radius: 10px;
+}
+
+.broadcast-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    gap: 30px;
+}
