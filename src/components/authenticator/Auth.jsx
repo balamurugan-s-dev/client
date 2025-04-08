@@ -2,7 +2,7 @@ import React from "react";
 
 export const checkAuthStatus = async () => {
     try {
-        const response = await fetch("http://localhost:5000/api/auth/status", {
+        const response = await fetch("https://server-dlvn.onrender.com/api/auth/status", {
             method: "GET",
             credentials: "include",
         });

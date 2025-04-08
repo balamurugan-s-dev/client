@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import io from "socket.io-client";
 import '../styles/RoomPage.css';
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://server-dlvn.onrender.com", {
   transports: ["websocket"],
   withCredentials: true,
 });
@@ -59,7 +59,7 @@ const RoomPage = () => {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/song/list");
+        const res = await fetch("https://server-dlvn.onrender.com/song/list");
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
         setSongList(data);
@@ -74,7 +74,7 @@ const RoomPage = () => {
   const handleSongClick = async (song) => {
     try {
       console.log("🎵 Clicked song:", song.title);
-      const songUrl = `http://localhost:5000/song/load/${song.title}`;
+      const songUrl = `https://server-dlvn.onrender.com/song/load/${song.title}`;
       setCurrentAudio(songUrl);
 
       // Send to others
@@ -128,7 +128,7 @@ const RoomPage = () => {
               <li key={song.id || song.title} onClick={() => handleSongClick(song)}>
                 <div>
                   <img
-                    src={`http://localhost:5000/song/albumart/${song.albumArt}`}
+                    src={`https://server-dlvn.onrender.com/song/albumart/${song.albumArt}`}
                     alt="Album Art"
                     className="song-img"
                   />

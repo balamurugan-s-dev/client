@@ -32,7 +32,7 @@ const Account = ({ admin }) =>{
 
 
     const fetchProfile = async () => {
-        const response = await fetch("http://localhost:5000/api/auth/userprofile", {
+        const response = await fetch("https://server-dlvn.onrender.com/api/auth/userprofile", {
             method: "GET",
             credentials: "include",
         });
@@ -52,7 +52,7 @@ const Account = ({ admin }) =>{
 
 
     const handlelogout = async () => {
-        const response = await fetch("http://localhost:5000/api/auth/logout", {
+        const response = await fetch("https://server-dlvn.onrender.com/api/auth/logout", {
             method: "POST",
             credentials: "include",
         });
@@ -72,7 +72,7 @@ const Account = ({ admin }) =>{
         formData.append("image", uploadPic);
     
         try {
-            const response = await fetch("http://localhost:5000/api/auth/update/profile", {
+            const response = await fetch("https://server-dlvn.onrender.com/api/auth/update/profile", {
                 method: "PUT",
                 credentials: "include",
                 body: formData,

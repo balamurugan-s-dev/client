@@ -31,7 +31,7 @@ const Administrator = ({ admin}) => {
         formData.append("audio", uploadSong);
 
         try {
-            const response = await fetch("http://localhost:5000/song/upload", {
+            const response = await fetch("https://server-dlvn.onrender.com/song/upload", {
                 method: "POST",
                 credentials: "include",
                 body: formData,
@@ -50,7 +50,7 @@ const Administrator = ({ admin}) => {
 
     const handleTotalSongList = async() => {
         try {
-            const res = await fetch("http://localhost:5000/song/list");
+            const res = await fetch("https://server-dlvn.onrender.com/song/list");
             if (!res.ok) throw new Error(res.statusText);
             const data = await res.json();
             setSongList(data);
@@ -65,7 +65,7 @@ const Administrator = ({ admin}) => {
 
     const handleDelete = async(id) =>{
         try{
-            const req = await fetch(`http://localhost:5000/song/delete/${id}`,{
+            const req = await fetch(`https://server-dlvn.onrender.com/song/delete/${id}`,{
                 method: 'DELETE',
                 credentials: 'include'
             })
@@ -116,7 +116,7 @@ const Administrator = ({ admin}) => {
                             <tr key={song._id}>
                                 <td>
                                     <img 
-                                        src={`http://localhost:5000/song/albumart/${song.albumArt}`} 
+                                        src={`https://server-dlvn.onrender.com/song/albumart/${song.albumArt}`} 
                                         alt={song.title} 
                                         className="album_art"
                                     />

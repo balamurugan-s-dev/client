@@ -17,7 +17,7 @@ const Navigater = () => {
   useEffect(() => {
     const fetchSongs = async () => {
       if (!query) return setResults([]);
-      const res = await fetch(`http://localhost:5000/song/search?query=${query}`,{
+      const res = await fetch(`https://server-dlvn.onrender.com/song/search?query=${query}`,{
         method: 'GET',
         credentials: 'include'
       });
@@ -31,7 +31,7 @@ const Navigater = () => {
 
       const imageUrls = {};
     await Promise.all(data.map(async (song) => {
-      const res = await fetch(`http://localhost:5000/song/albumArt/${song.albumArt}`, {
+      const res = await fetch(`https://server-dlvn.onrender.com/song/albumArt/${song.albumArt}`, {
         method: 'GET',
         credentials: 'include'
       });

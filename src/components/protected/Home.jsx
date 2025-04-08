@@ -29,7 +29,7 @@ const Home = () =>{
     useEffect(() => {
         const fetchSongs = async () => {
           try {
-            const res = await fetch("http://localhost:5000/song/list");
+            const res = await fetch("https://server-dlvn.onrender.com/song/list");
             if (!res.ok) throw new Error(res.statusText);
             const data = await res.json();
             setSongList(data);
@@ -43,7 +43,7 @@ const Home = () =>{
 
     useEffect(() => {
         if (currentSong && audioRef.current) {
-            audioRef.current.src = `http://localhost:5000/song/load/${currentSong.title}`;
+            audioRef.current.src = `https://server-dlvn.onrender.com/song/load/${currentSong.title}`;
             audioRef.current.load();
             audioRef.current.play();
         }
@@ -76,7 +76,7 @@ const Home = () =>{
                     <li key={song.id || song.title} className="song-li" onClick={() => playSong(song)}>
                       <div>
                         <img
-                          src={`http://localhost:5000/song/albumart/${song.albumArt}`}
+                          src={`https://server-dlvn.onrender.com/song/albumart/${song.albumArt}`}
                           alt="Album Art"
                           className="song-image"
                         />
@@ -94,7 +94,7 @@ const Home = () =>{
             {currentSong && (
                 <div className={"song_player" + (isfullscreen ? ' song_player1' : '')}>
                     <div className={(isfullscreen ? ' player_left' : '')}>
-                      <img src={`http://localhost:5000/song/albumart/${currentSong.albumArt}`} alt="" />
+                      <img src={`https://server-dlvn.onrender.com/song/albumart/${currentSong.albumArt}`} alt="" />
                       <div className="mini_play">
                         <span>{currentSong.title} - {currentSong.artist}</span>
                         <audio ref={audioRef} controls />
